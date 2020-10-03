@@ -12,8 +12,8 @@ from sklearn.tree import DecisionTreeClassifier
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://geniebox-media.s3-us-west-1.amazonaws.com/genie_background.png");
-background-size: 500px;
+background-image: url("https://geniebox-media.s3-us-west-1.amazonaws.com/geniebox_background.png");
+background-size: 400px;
 background-repeat: no-repeat;
 background-position: right 5% bottom 300%;
 }
@@ -26,7 +26,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title('GenieBox - Predicting The Most Suitable Shipping Box Size')
 st.header('Machine Learning Powered Genie®') 
-df2=pd.read_csv('https://geniebox-data.s3-us-west-1.amazonaws.com/GM_menu.csv')
+df2=pd.read_csv('https://geniebox-data.s3-us-west-1.amazonaws.com/Geniebox_menu.csv')
 
 #df2
 
@@ -62,7 +62,7 @@ index, counts = np.unique(input_coded, return_counts=True)
 count_item_label.iloc[index,0] = counts
 
 
-df = pd.read_csv('~/box_size_ml_project/GM_box_size_clean_data.csv')
+df = pd.read_csv('https://geniebox-data.s3-us-west-1.amazonaws.com/GM_box_size_clean_data.csv')
 df.drop(columns = {'order_number'}, inplace = True)
 # Keep the ratio of different box sizes
 x_train,x_test,y_train, y_test = train_test_split(df.iloc[:,0:4], df['FedEx_box_type'], stratify = df['FedEx_box_type'])
