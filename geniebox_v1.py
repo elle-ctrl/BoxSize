@@ -26,7 +26,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title('GenieBox - Predicting The Most Suitable Shipping Box Size')
 st.header('Machine Learning Powered Genie®') 
-df2=pd.read_csv('~/box_size_ml_project/GM_menu.csv')
+df2=pd.read_csv('https://geniebox-data.s3-us-west-1.amazonaws.com/GM_menu.csv')
 
 #df2
 
